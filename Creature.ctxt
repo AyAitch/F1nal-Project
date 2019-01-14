@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Creature
+comment1.params=
+comment1.target=boolean\ atEdgeOfWorld()
+comment1.text=\r\n\ at\ edge\ of\ world\ detects\ if\ the\ Alien\ is\ near\ the\ edge\ of\ the\ world\ and\ \r\n\ will\ rotate\ itself\r\n
+numComments=2
