@@ -8,8 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bomb extends Actor
 {
-    
-  
+
     
     /**
      * Act - do whatever the Bomb wants to do. This method is called whenever
@@ -20,22 +19,12 @@ public class Bomb extends Actor
         // Add your action code here.
         blowUp();
     }    
-    
+
     private void blowUp()
     {
-      if( isTouching(Piper.class) || isTouching((Martine.class) ) )
-      {
-        getWorld().removeObject( this );  
-        getWorld().addObject( new Explosion(), 275, 305 ); 
-        
-      }
+        if( isTouching(Piper.class) || isTouching((Martine.class) ) )
+        {
+            getWorld().removeObject( this );  
+        }
     }
-    
-    
-    
-    
-
-    
-    
-    
 }

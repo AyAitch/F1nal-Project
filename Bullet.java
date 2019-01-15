@@ -16,30 +16,29 @@ public class Bullet extends Actor
     {
         // Add your action code here.
         if(Greenfoot.isKeyDown("/") )
-         {
-             getWorld().addObject(new Bullet(), getX(), getY()  );
-         }
+        {
+            getWorld().addObject(new Bullet(), getX(), getY()  );
+        }
         bulletZoom(); 
         if (isTouching(Alien.class) == true )
         {
             removeTouching(Alien.class);
         }   
     }    
-    
-    
+
     private void bulletZoom()
     {
-      move(5);  
+        move(5);  
     }
-    
+
     private void touching()
     {
-      if( atEdgeOfWorld() == true )
-      {
-        removeTouching( Bullet.class );
-      }
+        if( atEdgeOfWorld() == true )
+        {
+            removeTouching( Bullet.class );
+        }
     }
-    
+
     private boolean atEdgeOfWorld()
     {    
         return getX()<5 || getY()<5 || getX()>getWorld().getWidth()-5 || getY()>getWorld().getHeight()-5;       

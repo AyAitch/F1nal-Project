@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Alien extends Creature
 {
-    
-    private int speed;
-    
+
+    private final int SPEED;
+
     public Alien()
     {
-      speed = Greenfoot.getRandomNumber(4)+4;  
+        SPEED = Greenfoot.getRandomNumber(4)+2;  
     }
-    
+
     /**
      * Act - do whatever the Alien wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -29,28 +29,28 @@ public class Alien extends Creature
             turn(3);
         }
     }
-        
+
     private void movement()
     {
-         if( Greenfoot.getRandomNumber(100) < 75 )
+        if( Greenfoot.getRandomNumber(100) < 75 )
         {
             move(2);
         }
         if ( Greenfoot.getRandomNumber(100) < 50 )
         {
             turn(3);
-           
+
         }
-        move(speed);
+        move(SPEED);
         if (isTouching(Spaceship.class) == true )
         {
             removeTouching(Spaceship.class);
-            
+
         }    
         if ( isTouching(SpaceshipP.class) == true )
         {
             removeTouching(SpaceshipP.class);  
         }
     }
-    }    
+}    
 

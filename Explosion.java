@@ -25,38 +25,39 @@ public class Explosion extends Actor
     private int increment = 1;
 
     private int actCycles = 0;
-    
+
     public Explosion()
     {
-     initializeImages();
-     setImage( images[0] );
+        initializeImages();
+        setImage( images[0] );
     }
+
     public void act()
     {
- 
-       actCycles++;
-       setImage(images[imageNum] );
-       imageNum+= increment;
-       if( imageNum >= IMAGE_COUNT )
-       {
-        increment = -increment;
-        imageNum = imageNum + increment;
-       }
-       if ( imageNum < 0 )
-       {
-         getWorld().removeObject(this); 
-         actCycles = 0;
-       }
-        
+
+        actCycles++;
+        setImage(images[imageNum] );
+        imageNum+= increment;
+        if( imageNum >= IMAGE_COUNT )
+        {
+            increment = -increment;
+            imageNum = imageNum + increment;
+        }
+        if ( imageNum < 0 )
+        {
+            getWorld().removeObject(this); 
+            actCycles = 0;
+        }
+
     }
-    
+
     private synchronized static void initializeImages()
     {
-        
+
         GreenfootImage baseImage = new GreenfootImage( "explosion-big.png" ); 
-        
+
         int size;
-        
+
         if (images == null )
         {
             images = new GreenfootImage[IMAGE_COUNT];
@@ -67,9 +68,7 @@ public class Explosion extends Actor
 
                 images[i] = new GreenfootImage(baseImage);
 
-                
                 images[i].scale(size,size);
-
             }
         }
     }

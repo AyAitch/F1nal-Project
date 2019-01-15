@@ -16,30 +16,28 @@ public class Martine extends Actor
     {
         // Add your action code here.
         movement();
-        
+
     }    
-    
-    
+
     private void movement()
     {
-     if(Greenfoot.isKeyDown("d") )
+        if(Greenfoot.isKeyDown("d") )
         {
             setLocation( getX()+1, getY() );
         }   
-     if ( Greenfoot.isKeyDown("a") )
+        if ( Greenfoot.isKeyDown("a") )
         {
             setLocation( getX()-1, getY() );
         }
-     if ( Greenfoot.isKeyDown("w") )
+        if ( Greenfoot.isKeyDown("w") )
         {
             setLocation( getX(), getY()-1 );
         }
-     if ( Greenfoot.isKeyDown("s") )
+        if ( Greenfoot.isKeyDown("s") )
         {
             setLocation( getX(), getY()+1 );
         }
     }
-    
-    
+
     
 }
