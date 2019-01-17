@@ -13,6 +13,7 @@ public class SpaceshipP extends Actor
     {
         getImage().rotate(90);
     }
+
     /**
      * Act - do whatever the SpaceshipP wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,37 +25,48 @@ public class SpaceshipP extends Actor
         move(1);
         if( Greenfoot.isKeyDown("/") )
         {
-         shoot();   
+            shoot();   
         }
     }  
     
+    /**
+     * shoot shoots the bullet from the spaceship so you can stay safe
+     * 
+     * @param None Their are no parameters
+     * @return Nothing is returned
+     */
     private void shoot()
     {
-     Bullet toAdd = new Bullet();
-     
-     toAdd.setRotation( getRotation() );
-     
-     getWorld().addObject(toAdd, getX(), getY() );
+        Bullet toAdd = new Bullet();
+
+        toAdd.setRotation( getRotation() );
+
+        getWorld().addObject(toAdd, getX(), getY() );
     }
     
-    
+    /**
+     * crazyDumbMovement is the crazy movement that the players rocketship goes through
+     * 
+     * @param Their are no parameters 
+     * @return Nothing is returned
+     */
     private void crazyDumbMovement()
     {
-      if( Greenfoot.isKeyDown("right") )
-      {
-        turn(5);  
-      }
-      else if( Greenfoot.isKeyDown("left") )
-      {
-        turn(-5) ;  
-      }
-      else if( Greenfoot.isKeyDown("up") )
-      {
-        move(3);  
-      }
-      else if( Greenfoot.isKeyDown("down") )
-      {
-        move(-2);   
-      }
+        if( Greenfoot.isKeyDown("right") )
+        {
+            turn(10);  
+        }
+        else if( Greenfoot.isKeyDown("left") )
+        {
+            turn(-7) ;  
+        }
+        else if( Greenfoot.isKeyDown("up") )
+        {
+            move(4);  
+        }
+        else if( Greenfoot.isKeyDown("down") )
+        {
+            move(-7);   
+        }
     }
 }

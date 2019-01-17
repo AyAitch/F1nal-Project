@@ -10,7 +10,7 @@ public class Spaceship_noFlames extends Actor
 {
     /**
      * Act - do whatever the Spaceship_noFlames wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * the 'Act' or 'Run' button gets pressed in the environment. This runs the check for martine class.
      */
     public void act() 
     {
@@ -18,12 +18,14 @@ public class Spaceship_noFlames extends Actor
         checkForMartine();
     }   
     
-    
+    /** 
+     * checkForPiper checks if the spaceship is touching martine, if it is then remove piper and take off!!
+     */
     private void checkForMartine()
     {
         if(isTouching(Martine.class))
-            {
-                removeTouching(Martine.class);
-            }
+        {
+            removeTouching(Martine.class);
+        }
     }
 }
