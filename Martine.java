@@ -19,6 +19,13 @@ public class Martine extends Actor
 
     }    
 
+    
+    /**
+     * movement tells martine how to move and how fast he moves
+     * 
+     * @param None their are no parameters
+     * @return Nothing is returned 
+     */
     private void movement()
     {
         if(Greenfoot.isKeyDown("d") )

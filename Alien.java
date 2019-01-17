@@ -10,7 +10,11 @@ public class Alien extends Creature
 {
 
     private final int SPEED;
-
+    
+    /**
+     * Constructor for objects of class Alein.
+     * 
+     */
     public Alien()
     {
         SPEED = Greenfoot.getRandomNumber(4)+2;  
@@ -19,6 +23,9 @@ public class Alien extends Creature
     /**
      * Act - do whatever the Alien wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * @param None their are no parameters
+     * @return Nothing is returned
      */
     public void act() 
     {
@@ -29,7 +36,12 @@ public class Alien extends Creature
             turn(3);
         }
     }
-
+    /**
+     * movement tells the alien how fast to move every act cycle
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
     private void movement()
     {
         if( Greenfoot.getRandomNumber(100) < 75 )

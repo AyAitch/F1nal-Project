@@ -9,9 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bullet extends Actor
 {
     /**
-     * Act - do whatever the Bullet wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    * act is the method that
+    * runs during every act cycle
+    * of the scenario
+    *
+    * @param There are no parameters
+    * @return Nothing is returned
+    */
     public void act() 
     {
         // Add your action code here.
@@ -25,22 +29,16 @@ public class Bullet extends Actor
             removeTouching(Alien.class);
         }   
     }    
-
+    /**
+     * bulletZoom tells the bullet how far to move each act cycle
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
     private void bulletZoom()
     {
         move(5);  
     }
-
-    private void touching()
-    {
-        if( atEdgeOfWorld() == true )
-        {
-            removeTouching( Bullet.class );
-        }
-    }
-
-    private boolean atEdgeOfWorld()
-    {    
-        return getX()<5 || getY()<5 || getX()>getWorld().getWidth()-5 || getY()>getWorld().getHeight()-5;       
-    }   
+    
+    
 }

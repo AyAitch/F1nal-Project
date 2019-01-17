@@ -11,15 +11,25 @@ public class Bomb extends Actor
 
     
     /**
-     * Act - do whatever the Bomb wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    * act is the method that
+    * runs during every act cycle
+    * of the scenario
+    *
+    * @param There are no parameters
+    * @return Nothing is returned
+    */
     public void act() 
     {
         // Add your action code here.
         blowUp();
     }    
-
+    
+    /**
+     * blowUp tells the bomb to blow up when piper or martine touches the bomb actor/object
+     * 
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
     private void blowUp()
     {
         if( isTouching(Piper.class) || isTouching((Martine.class) ) )

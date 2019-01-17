@@ -25,13 +25,26 @@ public class Explosion extends Actor
     private int increment = 1;
 
     private int actCycles = 0;
-
+    
+    /**
+     * Constructor for objects of class Explosion.
+     * 
+     */
     public Explosion()
     {
         initializeImages();
         setImage( images[0] );
     }
-
+    
+    
+    /**
+    * act is the method that
+    * runs during every act cycle
+    * of the scenario
+    *
+    * @param There are no parameters
+    * @return Nothing is returned
+    */
     public void act()
     {
 
@@ -51,6 +64,12 @@ public class Explosion extends Actor
 
     }
 
+    /**
+     * initializeImages initializes the images  for all explosions at once
+     * 
+     * @param None Their are no parameters
+     * @return Nothing is returned
+     */    
     private synchronized static void initializeImages()
     {
 
