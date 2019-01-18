@@ -19,11 +19,14 @@ public class Explosion extends Actor
     private static GreenfootImage[] images; 
 
     /** Current size of the explosion */
+    // sets the integer value of imageNum to 0
     private int imageNum = 0;
 
     /** How much do we increment the index in the explosion animation. */
+    // sets the integer value of increment to 1
     private int increment = 1;
-
+    
+    // sets the integer value of actCycles to 0
     private int actCycles = 0;
     
     /**
