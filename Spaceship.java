@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Spaceship extends Actor
 {
-    private int speed = 15;
      /**
      * Constructor for objects of class Alein.
      * 

@@ -24,26 +24,8 @@ public class SpaceshipP extends Actor
         final int SPEED = 15;
         crazyDumbMovement();
         move(SPEED);
-        if( Greenfoot.isKeyDown("/") )
-        {
-            shoot();   
-        }
     }  
     
-    /**
-     * shoot shoots the bullet from the spaceship so you can stay safe
-     * 
-     * @param None Their are no parameters
-     * @return Nothing is returned
-     */
-    private void shoot()
-    {
-        Bullet toAdd = new Bullet();
-
-        toAdd.setRotation( getRotation() );
-
-        getWorld().addObject(toAdd, getX(), getY() );
-    }
     
     /**
      * crazyDumbMovement is the crazy movement that the players rocketship goes through

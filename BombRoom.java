@@ -121,7 +121,7 @@ public class BombRoom extends World
     
     
     /**
-     * roomGoesBoom blows up the creen when you win or lose
+     * roomGoesBoom blows up the screen when you win or lose
      * 
      * @param Ther are no parameters
      * @return Nothing is returned

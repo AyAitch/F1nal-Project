@@ -53,7 +53,7 @@ public class MyWorld extends greenfoot.World
      */
     private void addAliens()
     {
-        for( int i = 0; i < 350; i++ )
+        for( int i = 0; i < 500; i++ )
         {
             addObject( new Alien(), Greenfoot.getRandomNumber(400) - 200, Greenfoot.getRandomNumber(400) + 200);
         }
