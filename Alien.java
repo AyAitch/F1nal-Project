@@ -12,12 +12,12 @@ public class Alien extends Creature
     private final int SPEED;
     
     /**
-     * Constructor for objects of class Alein.
+     * Constructor for objects of class Alien.
      * 
      */
     public Alien()
     {
-        SPEED = Greenfoot.getRandomNumber(4)+2;  
+        SPEED = Greenfoot.getRandomNumber(4);  
     }
 
     /**
@@ -44,11 +44,11 @@ public class Alien extends Creature
      */
     private void movement()
     {
-        if( Greenfoot.getRandomNumber(100) < 75 )
+        if( Greenfoot.getRandomNumber(100) > 25 )
         {
             move(2);
         }
-        if ( Greenfoot.getRandomNumber(100) < 50 )
+        if ( Greenfoot.getRandomNumber(100) < 25 )
         {
             turn(3);
 
