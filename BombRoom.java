@@ -39,6 +39,9 @@ public class BombRoom extends World
         showText( " Touch the Bomb", getWidth()/2, getHeight()/2 );
     }
      
+    
+    
+    
     /** 
      * addPlayers adds the characters that the players of the game play. this adds the players to the world
      * 
@@ -130,6 +133,7 @@ public class BombRoom extends World
             addObject( new Explosion(), Greenfoot.getRandomNumber( getWidth() ), Greenfoot.getRandomNumber(getHeight() ));
             showText(" You Lose", getHeight()/2, getWidth()/2 );
         }
+        Greenfoot.playSound("au.wav");
     }
 
     
