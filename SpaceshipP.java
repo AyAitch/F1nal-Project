@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceshipP extends Actor
 {
-    private int speed = 15;
+    
     public SpaceshipP()
     {
         getImage().rotate(90);
@@ -21,8 +21,9 @@ public class SpaceshipP extends Actor
     public void act() 
     {
         // Add your action code here
+        final int SPEED = 15;
         crazyDumbMovement();
-        move(1);
+        move(SPEED);
         if( Greenfoot.isKeyDown("/") )
         {
             shoot();   
