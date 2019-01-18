@@ -83,13 +83,15 @@ public class Explosion extends Actor
         if (images == null )
         {
             images = new GreenfootImage[IMAGE_COUNT];
-
+            // as long as i is less that IMAGE_COUNT...
             for( int i = 0; i < IMAGE_COUNT; i++ )
             {
+                // size is i + 1 multiplyied by the width of the of the base image divided by IMAGE_COUNT
                 size = (i+1)*(baseImage.getWidth()/IMAGE_COUNT);
-
+               
                 images[i] = new GreenfootImage(baseImage);
-
+                
+                // scales the size of the images to the integer varible size for the height and width
                 images[i].scale(size,size);
             }
         }
