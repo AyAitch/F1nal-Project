@@ -34,7 +34,7 @@ public class MyWorld extends greenfoot.World
     }
 
     /**
-     * addShips adds the players and the aleins to the world
+     * addShips adds the players and the aliens to the world
      * 
      * @param There are no parameters 
      * @return Nothing is returned
@@ -53,12 +53,11 @@ public class MyWorld extends greenfoot.World
      */
     private void addAliens()
     {
-        for( int i = 0; i < 500; i++ )
+        for( int i = 0; i < 750; i++ )
         {
             addObject( new Alien(), Greenfoot.getRandomNumber(400) - 200, Greenfoot.getRandomNumber(400) + 200);
         }
-
-      
+        addObject( new Hunter(), 10, 785 );
     }
     
     
@@ -72,6 +71,10 @@ public class MyWorld extends greenfoot.World
     {
         addObject( new SpaceshipP(), Greenfoot.getRandomNumber(400)+400, Greenfoot.getRandomNumber(400)+400 );
         addObject( new Spaceship(), Greenfoot.getRandomNumber(400)+400, Greenfoot.getRandomNumber(400)+400 );
+        for( int i = 0; i < 25; i++ )
+        {
+            addObject( new Bulldozer_AI(), Greenfoot.getRandomNumber(200)+600, Greenfoot.getRandomNumber(250) );
+        }
     }
 
     

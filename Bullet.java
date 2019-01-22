@@ -28,6 +28,10 @@ public class Bullet extends Actor
         {
             removeTouching(Alien.class);
         }   
+        if (isTouching(Bulldozer_AI.class) == true )
+        {
+            removeTouching(Alien.class);
+        }
     }    
     /**
      * bulletZoom tells the bullet how far to move each act cycle
