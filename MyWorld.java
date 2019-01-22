@@ -58,6 +58,11 @@ public class MyWorld extends greenfoot.World
             addObject( new Alien(), Greenfoot.getRandomNumber(400) - 200, Greenfoot.getRandomNumber(400) + 200);
         }
         addObject( new Hunter(), 10, 785 );
+        //remove the next lines of code at your own risk ( DO IT )
+        //for( int i = 0; i < 50; i++ )
+        //{
+        //    addObject( new Mine(), Greenfoot.getRandomNumber(800), Greenfoot.getRandomNumber(800) );   
+        //}
     }
 
     /**
@@ -77,7 +82,6 @@ public class MyWorld extends greenfoot.World
         for( int i = 0; i < 10; i++ )
         {
             addObject( new Bulldozer_AI(), Greenfoot.getRandomNumber(15), Greenfoot.getRandomNumber(25) ) ;
-            
         }
     }
 
