@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Spaceship extends Actor
 {
      /**
-     * Constructor for objects of class Alein.
+     * Constructor for objects of class Spaceship.
      * 
      */
     public Spaceship()

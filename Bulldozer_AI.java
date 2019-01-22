@@ -16,7 +16,7 @@ public class Bulldozer_AI extends Creature
      */
     public Bulldozer_AI()
     {
-        SPEED = Greenfoot.getRandomNumber(4);  
+        SPEED = 3;  
         getImage().rotate(90);
     }
 
@@ -50,12 +50,12 @@ public class Bulldozer_AI extends Creature
         }
         else if ( Greenfoot.getRandomNumber(100) < 50 )
         {
-            turn(6);
+            turn(10);
             move(1);
         }
         else  
         {
-            turn(-6);
+            turn(-10);
             move(1);
         }
         move(SPEED);    

@@ -21,13 +21,13 @@ public class MyWorld extends greenfoot.World
     }
 
     /**
-    * act is the method that
-    * runs during every act cycle
-    * of the scenario
-    *
-    * @param There are no parameters
-    * @return Nothing is returned
-    */
+     * act is the method that
+     * runs during every act cycle
+     * of the scenario
+     *
+     * @param There are no parameters
+     * @return Nothing is returned
+     */
     public void act()
     {
         checkForWorldChange();
@@ -59,8 +59,7 @@ public class MyWorld extends greenfoot.World
         }
         addObject( new Hunter(), 10, 785 );
     }
-    
-    
+
     /**
      * addPlayerships adds the location of the player ships to the world
      * 
@@ -75,10 +74,14 @@ public class MyWorld extends greenfoot.World
         {
             addObject( new Bulldozer_AI(), Greenfoot.getRandomNumber(200)+600, Greenfoot.getRandomNumber(250) );
         }
+        for( int i = 0; i < 10; i++ )
+        {
+            addObject( new Bulldozer_AI(), Greenfoot.getRandomNumber(15), Greenfoot.getRandomNumber(25) ) ;
+            
+        }
     }
 
-    
-   /**
+    /**
      * checkForWorldChange checks to see if piper and martine are gone. If they are gone, it sets the world to MyWorld
      * 
      * @param There are no parameters
